@@ -14,6 +14,8 @@
 		4501E9D5283CC7910098A376 /* Katib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4501E9D3283CC7910098A376 /* Katib.xcdatamodeld */; };
 		4501E9D7283CC7930098A376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4501E9D6283CC7930098A376 /* Assets.xcassets */; };
 		4501E9DA283CC7930098A376 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4501E9D8283CC7930098A376 /* LaunchScreen.storyboard */; };
+		45A73C62283CEB9F00F16448 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A73C61283CEB9F00F16448 /* MainViewController.swift */; };
+		45A73C64283CEC5A00F16448 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A73C63283CEC5A00F16448 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		4501E9D6283CC7930098A376 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4501E9D9283CC7930098A376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4501E9DB283CC7930098A376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45A73C61283CEB9F00F16448 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		45A73C63283CEC5A00F16448 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				4501E9CC283CC7910098A376 /* SceneDelegate.swift */,
 				4501E9CE283CC7910098A376 /* ViewController.swift */,
 				4501E9D0283CC7910098A376 /* Main.storyboard */,
+				45A73C61283CEB9F00F16448 /* MainViewController.swift */,
+				45A73C63283CEC5A00F16448 /* Extensions.swift */,
 				4501E9D6283CC7930098A376 /* Assets.xcassets */,
 				4501E9D8283CC7930098A376 /* LaunchScreen.storyboard */,
 				4501E9DB283CC7930098A376 /* Info.plist */,
@@ -142,9 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4501E9CF283CC7910098A376 /* ViewController.swift in Sources */,
+				45A73C64283CEC5A00F16448 /* Extensions.swift in Sources */,
 				4501E9D5283CC7910098A376 /* Katib.xcdatamodeld in Sources */,
 				4501E9CB283CC7910098A376 /* AppDelegate.swift in Sources */,
 				4501E9CD283CC7910098A376 /* SceneDelegate.swift in Sources */,
+				45A73C62283CEB9F00F16448 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
