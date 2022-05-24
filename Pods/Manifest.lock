@@ -1,0 +1,16 @@
+PODS:
+  - MaLiang (2.9.2)
+
+DEPENDENCIES:
+  - MaLiang
+
+SPEC REPOS:
+  trunk:
+    - MaLiang
+
+SPEC CHECKSUMS:
+  MaLiang: 7cf6c70e37577b5ec1b34add37fa6d58808f5451
+
+PODFILE CHECKSUM: e31e575f31040ea4ab8be7eeb2f4a83165115e7d
+
+COCOAPODS: 1.11.3

@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05E40F3F072C3767F03F52C971D23642 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A716759D07259A1BB0C288DE219AFEA2 /* Utils.swift */; };
+		081B742BB4334E5254304B72CEBDBE94 /* WeakObjectBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B85BDB7586E1132A51156A2C3F9B10 /* WeakObjectBox.swift */; };
+		0BD9F96DCC2891908F6F4DF2367BEC7B /* BezierGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A97AECDD63B4DA2EE7FC53CE95EB2 /* BezierGenerator.swift */; };
+		15FE6C1E5B86B7C929956FC1A1826BAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		1D7876864A1A0E79098ED0A27DA021B2 /* MaLiang-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F64B48F184A6249BD32E2603958EF4 /* MaLiang-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DD97B4BCBA3A2DD3F49FD00AC124897 /* Chartlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE49D7D61DBB0FB5789E0B7397E1DDE /* Chartlet.swift */; };
+		221B1EC2C03133E0F659A7481DED692C /* Pods-Katib-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E033E527273B500FA2C28D913DCBD27 /* Pods-Katib-dummy.m */; };
+		22B73D3AC14649EC23890BFCC2C0B975 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = C8D5AD306D328A3CF3C08843F30D8963 /* Shaders.metal */; };
+		2D0300EBF15B5391704429FA69DAAC29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		3575FBBEA4C3441FA6977C91E9DB3F4E /* SnapshotTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ADDCEF838DA04AA53014D19A887339 /* SnapshotTarget.swift */; };
+		374C0F54464453AF25FD76FD0BAD1A5C /* RenderTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3083AA8A08298056554BFE355C69A5 /* RenderTarget.swift */; };
+		37AF09E9D635424C4EC36B2F8DF09C9D /* LineStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7283D5308CB2B2DE3EA285995B8E723C /* LineStrip.swift */; };
+		3EB61EB106B3BA19865571B58D47E82D /* MLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCF7D8B765E62A09ABF9BD7A03D6A9F /* MLError.swift */; };
+		44E0D9C61D78011F5237944EF60DABE5 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC925820424C0DB44A240E531AA03534 /* MetalView.swift */; };
+		4BAFF998649EC92105C6BEB2021DD763 /* ChartletBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218A44087B0653026A103EBD60A3BE5B /* ChartletBrush.swift */; };
+		4E3BF6ECA8496D4EF8B00A8FAA3FE075 /* MaLiang-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E21C185A930B6ACB94014CAF980C58 /* MaLiang-dummy.m */; };
+		4F8A451EE2833A6C159A001E8A2E9356 /* ElementGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24612AA13DC5435690ED2127BE9EC2DC /* ElementGroup.swift */; };
+		5FA575D3C2C8F5E9492F07AAD3101028 /* GlowingBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F47E37CE352001B9462CF67845EE57 /* GlowingBrush.swift */; };
+		6A93AE50C525D13597ABF205C651AFEE /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191D9544A3921D361C70AC7B716FBFD /* Document.swift */; };
+		731BF2E648564E64B75E3DD94984C375 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF10C493486EAD817A21BCE6BCF69D /* Printer.swift */; };
+		7FE90A6C9901E92A5504D963458ADBA2 /* MLLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3781C2BAB5E3E24D6A11230046FEB4C /* MLLine.swift */; };
+		8F9D351E512586960AFF78926A19C663 /* ActionObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E83D41C8811533CA4D726C96F3F670 /* ActionObserver.swift */; };
+		99ED180F2D3ED2FB74CF575600C1AF0B /* DataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6728AB6A1681258E21C9704AC00138 /* DataImporter.swift */; };
+		9F8D33E55F9CCB3FA399FC056E63849F /* CanvasData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B1797DDBE67B938B665E4F1FEEF7C /* CanvasData.swift */; };
+		ADD5840CA91CE91CEEAB5DF7E06E7E52 /* DataExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E0FB3E06943D415D1A9C70B3398A2 /* DataExporter.swift */; };
+		B507A144E38EEB2A78895543F40318FC /* ScrollableCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF094A1DC5E93C8E03F812946F2DF7 /* ScrollableCanvas.swift */; };
+		B6647A3E5B19ECF0628007E0D15A815E /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCA284ED7D3D59495DCA5F7BFD8AC0 /* Renderer.swift */; };
+		BA6DCE963C5C17ECC9D620F3BDAC7F41 /* MLTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7CF24FA26FAEEED5498FCDEF8B0110 /* MLTexture.swift */; };
+		C0A82BC6547D5010C166375FDABBA213 /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0D0FA08B9390653CE47D87D989633D /* Maths.swift */; };
+		C15F9543E5FC23E579795C3825840866 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4277299A058D0B1809B7D07D15FCDD4 /* Canvas.swift */; };
+		CA26B94150D9737A052424F1F5BCFC53 /* Pods-Katib-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CCB491980E6259CBB52715A99CB6FE16 /* Pods-Katib-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB7C6F29A9EC6AAEB6F0257F3C766F74 /* PaintingGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA81686DF2752017915E03AF2A7B6DC /* PaintingGestureRecognizer.swift */; };
+		CDE1C4F9F48E4FCC1CB80A5F6F0EB664 /* DataObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9575B8E0997D902413456E3038AFF4 /* DataObserver.swift */; };
+		D454EF3B88E9A0611D02B46D2E77C72A /* MLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70055FC4959F92F8C55FF2B888C80FD /* MLColor.swift */; };
+		E6A6F98B9F3A86987CC0714A8BFF3647 /* Brush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676BB0737B554CD7EC940D94E9407438 /* Brush.swift */; };
+		ED842AF85FA49CE0197EA33AA957DCD4 /* Eraser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D190206585C6911389C807703B7384C /* Eraser.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6209B500FB02EFB39F424A91044B09E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E631E27C5D04BC21AB3851D6CCE8E73E;
+			remoteInfo = MaLiang;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D6728AB6A1681258E21C9704AC00138 /* DataImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataImporter.swift; path = "MaLiang/Classes/Data & Documents/DataImporter.swift"; sourceTree = "<group>"; };
+		1191D9544A3921D361C70AC7B716FBFD /* Document.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Document.swift; path = "MaLiang/Classes/Data & Documents/Document.swift"; sourceTree = "<group>"; };
+		13265E485719BA3C3C8365B7D59580B0 /* Pods-Katib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Katib.debug.xcconfig"; sourceTree = "<group>"; };
+		15E21C185A930B6ACB94014CAF980C58 /* MaLiang-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MaLiang-dummy.m"; sourceTree = "<group>"; };
+		218A44087B0653026A103EBD60A3BE5B /* ChartletBrush.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartletBrush.swift; path = MaLiang/Classes/Brush/ChartletBrush.swift; sourceTree = "<group>"; };
+		24612AA13DC5435690ED2127BE9EC2DC /* ElementGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ElementGroup.swift; path = MaLiang/Classes/Elements/ElementGroup.swift; sourceTree = "<group>"; };
+		2C2A5ECF3A3C1FF4C583B31A79ACE2BC /* MaLiang.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MaLiang.modulemap; sourceTree = "<group>"; };
+		313EFBF4F18C614E26F083683E80BA48 /* Pods-Katib-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Katib-frameworks.sh"; sourceTree = "<group>"; };
+		3385079B16155BE129DA2FF13F0983BB /* Pods-Katib-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Katib-Info.plist"; sourceTree = "<group>"; };
+		34E83D41C8811533CA4D726C96F3F670 /* ActionObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionObserver.swift; path = MaLiang/Classes/Canvas/ActionObserver.swift; sourceTree = "<group>"; };
+		37F64B48F184A6249BD32E2603958EF4 /* MaLiang-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MaLiang-umbrella.h"; sourceTree = "<group>"; };
+		3E033E527273B500FA2C28D913DCBD27 /* Pods-Katib-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Katib-dummy.m"; sourceTree = "<group>"; };
+		44B85BDB7586E1132A51156A2C3F9B10 /* WeakObjectBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeakObjectBox.swift; path = "MaLiang/Classes/Math & Utils/WeakObjectBox.swift"; sourceTree = "<group>"; };
+		4D7B1797DDBE67B938B665E4F1FEEF7C /* CanvasData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CanvasData.swift; path = "MaLiang/Classes/Data & Documents/CanvasData.swift"; sourceTree = "<group>"; };
+		52DF10C493486EAD817A21BCE6BCF69D /* Printer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Printer.swift; path = MaLiang/Classes/Brush/Printer.swift; sourceTree = "<group>"; };
+		5540B74144B502B5EB753014ABA53EF5 /* Pods-Katib-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Katib-acknowledgements.plist"; sourceTree = "<group>"; };
+		560A97AECDD63B4DA2EE7FC53CE95EB2 /* BezierGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BezierGenerator.swift; path = "MaLiang/Classes/Math & Utils/BezierGenerator.swift"; sourceTree = "<group>"; };
+		561FDE70CC45DD7B69DE2B06A4D8FF80 /* Pods-Katib.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Katib.modulemap"; sourceTree = "<group>"; };
+		5D190206585C6911389C807703B7384C /* Eraser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Eraser.swift; path = MaLiang/Classes/Brush/Eraser.swift; sourceTree = "<group>"; };
+		63084B6FC55372ECDF2D5DFA242B8DE3 /* Pods-Katib-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Katib-acknowledgements.markdown"; sourceTree = "<group>"; };
+		676BB0737B554CD7EC940D94E9407438 /* Brush.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Brush.swift; path = MaLiang/Classes/Brush/Brush.swift; sourceTree = "<group>"; };
+		71BBB3B13373344E3B4FF2A4C7A073B6 /* MaLiang-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MaLiang-prefix.pch"; sourceTree = "<group>"; };
+		728166074C0E9AB3BA82EE0D172D13E4 /* MaLiang-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MaLiang-Info.plist"; sourceTree = "<group>"; };
+		7283D5308CB2B2DE3EA285995B8E723C /* LineStrip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineStrip.swift; path = MaLiang/Classes/Elements/LineStrip.swift; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7B5A3B55DC69C3A37840FEEE007E9613 /* Pods-Katib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Katib.release.xcconfig"; sourceTree = "<group>"; };
+		7C76389560AFC013750B92D7C6788705 /* MaLiang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MaLiang.release.xcconfig; sourceTree = "<group>"; };
+		8E3083AA8A08298056554BFE355C69A5 /* RenderTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RenderTarget.swift; path = MaLiang/Classes/MetalBase/RenderTarget.swift; sourceTree = "<group>"; };
+		8FE49D7D61DBB0FB5789E0B7397E1DDE /* Chartlet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Chartlet.swift; path = MaLiang/Classes/Elements/Chartlet.swift; sourceTree = "<group>"; };
+		9A7CF24FA26FAEEED5498FCDEF8B0110 /* MLTexture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MLTexture.swift; path = MaLiang/Classes/MetalBase/MLTexture.swift; sourceTree = "<group>"; };
+		9AA81686DF2752017915E03AF2A7B6DC /* PaintingGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaintingGestureRecognizer.swift; path = "MaLiang/Classes/Math & Utils/PaintingGestureRecognizer.swift"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FCF7D8B765E62A09ABF9BD7A03D6A9F /* MLError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MLError.swift; path = MaLiang/Classes/MetalBase/MLError.swift; sourceTree = "<group>"; };
+		A716759D07259A1BB0C288DE219AFEA2 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = "MaLiang/Classes/Math & Utils/Utils.swift"; sourceTree = "<group>"; };
+		AA74F5742B646E2D8FEB75C54F1F2362 /* MaLiang */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MaLiang; path = MaLiang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC9575B8E0997D902413456E3038AFF4 /* DataObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataObserver.swift; path = "MaLiang/Classes/Data & Documents/DataObserver.swift"; sourceTree = "<group>"; };
+		ADBF094A1DC5E93C8E03F812946F2DF7 /* ScrollableCanvas.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableCanvas.swift; path = MaLiang/Classes/Canvas/ScrollableCanvas.swift; sourceTree = "<group>"; };
+		AE6E0FB3E06943D415D1A9C70B3398A2 /* DataExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataExporter.swift; path = "MaLiang/Classes/Data & Documents/DataExporter.swift"; sourceTree = "<group>"; };
+		AF0D0FA08B9390653CE47D87D989633D /* Maths.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Maths.swift; path = "MaLiang/Classes/Math & Utils/Maths.swift"; sourceTree = "<group>"; };
+		B3781C2BAB5E3E24D6A11230046FEB4C /* MLLine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MLLine.swift; path = MaLiang/Classes/Elements/MLLine.swift; sourceTree = "<group>"; };
+		C8D5AD306D328A3CF3C08843F30D8963 /* Shaders.metal */ = {isa = PBXFileReference; includeInIndex = 1; name = Shaders.metal; path = MaLiang/Classes/MetalBase/Shaders.metal; sourceTree = "<group>"; };
+		CCB491980E6259CBB52715A99CB6FE16 /* Pods-Katib-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Katib-umbrella.h"; sourceTree = "<group>"; };
+		D4277299A058D0B1809B7D07D15FCDD4 /* Canvas.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Canvas.swift; path = MaLiang/Classes/Canvas/Canvas.swift; sourceTree = "<group>"; };
+		D70055FC4959F92F8C55FF2B888C80FD /* MLColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MLColor.swift; path = MaLiang/Classes/MetalBase/MLColor.swift; sourceTree = "<group>"; };
+		E4AE1567D3953AD29688A3F18C4C02C1 /* MaLiang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MaLiang.debug.xcconfig; sourceTree = "<group>"; };
+		EC925820424C0DB44A240E531AA03534 /* MetalView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetalView.swift; path = MaLiang/Classes/MetalBase/MetalView.swift; sourceTree = "<group>"; };
+		EEC5AD08B7E5390980C9C7E1B81D887C /* Pods-Katib */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Katib"; path = Pods_Katib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1F47E37CE352001B9462CF67845EE57 /* GlowingBrush.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GlowingBrush.swift; path = MaLiang/Classes/Brush/GlowingBrush.swift; sourceTree = "<group>"; };
+		F8ADDCEF838DA04AA53014D19A887339 /* SnapshotTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapshotTarget.swift; path = MaLiang/Classes/MetalBase/SnapshotTarget.swift; sourceTree = "<group>"; };
+		FDFCA284ED7D3D59495DCA5F7BFD8AC0 /* Renderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Renderer.swift; path = MaLiang/Classes/MetalBase/Renderer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9E3EF865BF7D80CC2534872F7A0CEEF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15FE6C1E5B86B7C929956FC1A1826BAD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDB997478737F09C129F8C65D7187EFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D0300EBF15B5391704429FA69DAAC29 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05F879BA2F6B3B2C1AA0FBEFE11C22DA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C2A5ECF3A3C1FF4C583B31A79ACE2BC /* MaLiang.modulemap */,
+				15E21C185A930B6ACB94014CAF980C58 /* MaLiang-dummy.m */,
+				728166074C0E9AB3BA82EE0D172D13E4 /* MaLiang-Info.plist */,
+				71BBB3B13373344E3B4FF2A4C7A073B6 /* MaLiang-prefix.pch */,
+				37F64B48F184A6249BD32E2603958EF4 /* MaLiang-umbrella.h */,
+				E4AE1567D3953AD29688A3F18C4C02C1 /* MaLiang.debug.xcconfig */,
+				7C76389560AFC013750B92D7C6788705 /* MaLiang.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MaLiang";
+			sourceTree = "<group>";
+		};
+		13964D29167B5EBA0FA48CC7761778BE /* Pods-Katib */ = {
+			isa = PBXGroup;
+			children = (
+				561FDE70CC45DD7B69DE2B06A4D8FF80 /* Pods-Katib.modulemap */,
+				63084B6FC55372ECDF2D5DFA242B8DE3 /* Pods-Katib-acknowledgements.markdown */,
+				5540B74144B502B5EB753014ABA53EF5 /* Pods-Katib-acknowledgements.plist */,
+				3E033E527273B500FA2C28D913DCBD27 /* Pods-Katib-dummy.m */,
+				313EFBF4F18C614E26F083683E80BA48 /* Pods-Katib-frameworks.sh */,
+				3385079B16155BE129DA2FF13F0983BB /* Pods-Katib-Info.plist */,
+				CCB491980E6259CBB52715A99CB6FE16 /* Pods-Katib-umbrella.h */,
+				13265E485719BA3C3C8365B7D59580B0 /* Pods-Katib.debug.xcconfig */,
+				7B5A3B55DC69C3A37840FEEE007E9613 /* Pods-Katib.release.xcconfig */,
+			);
+			name = "Pods-Katib";
+			path = "Target Support Files/Pods-Katib";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		64123C8D828191A9C912A3169D4E26C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B05D3C6B05B7E55D8271D2E714117D5E /* MaLiang */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6D18C3616670FA533CE5855E89CD301F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA74F5742B646E2D8FEB75C54F1F2362 /* MaLiang */,
+				EEC5AD08B7E5390980C9C7E1B81D887C /* Pods-Katib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A2284A8E8A3811989EADAF85986EA16 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				13964D29167B5EBA0FA48CC7761778BE /* Pods-Katib */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B05D3C6B05B7E55D8271D2E714117D5E /* MaLiang */ = {
+			isa = PBXGroup;
+			children = (
+				34E83D41C8811533CA4D726C96F3F670 /* ActionObserver.swift */,
+				560A97AECDD63B4DA2EE7FC53CE95EB2 /* BezierGenerator.swift */,
+				676BB0737B554CD7EC940D94E9407438 /* Brush.swift */,
+				D4277299A058D0B1809B7D07D15FCDD4 /* Canvas.swift */,
+				4D7B1797DDBE67B938B665E4F1FEEF7C /* CanvasData.swift */,
+				8FE49D7D61DBB0FB5789E0B7397E1DDE /* Chartlet.swift */,
+				218A44087B0653026A103EBD60A3BE5B /* ChartletBrush.swift */,
+				AE6E0FB3E06943D415D1A9C70B3398A2 /* DataExporter.swift */,
+				0D6728AB6A1681258E21C9704AC00138 /* DataImporter.swift */,
+				AC9575B8E0997D902413456E3038AFF4 /* DataObserver.swift */,
+				1191D9544A3921D361C70AC7B716FBFD /* Document.swift */,
+				24612AA13DC5435690ED2127BE9EC2DC /* ElementGroup.swift */,
+				5D190206585C6911389C807703B7384C /* Eraser.swift */,
+				F1F47E37CE352001B9462CF67845EE57 /* GlowingBrush.swift */,
+				7283D5308CB2B2DE3EA285995B8E723C /* LineStrip.swift */,
+				AF0D0FA08B9390653CE47D87D989633D /* Maths.swift */,
+				EC925820424C0DB44A240E531AA03534 /* MetalView.swift */,
+				D70055FC4959F92F8C55FF2B888C80FD /* MLColor.swift */,
+				9FCF7D8B765E62A09ABF9BD7A03D6A9F /* MLError.swift */,
+				B3781C2BAB5E3E24D6A11230046FEB4C /* MLLine.swift */,
+				9A7CF24FA26FAEEED5498FCDEF8B0110 /* MLTexture.swift */,
+				9AA81686DF2752017915E03AF2A7B6DC /* PaintingGestureRecognizer.swift */,
+				52DF10C493486EAD817A21BCE6BCF69D /* Printer.swift */,
+				FDFCA284ED7D3D59495DCA5F7BFD8AC0 /* Renderer.swift */,
+				8E3083AA8A08298056554BFE355C69A5 /* RenderTarget.swift */,
+				ADBF094A1DC5E93C8E03F812946F2DF7 /* ScrollableCanvas.swift */,
+				C8D5AD306D328A3CF3C08843F30D8963 /* Shaders.metal */,
+				F8ADDCEF838DA04AA53014D19A887339 /* SnapshotTarget.swift */,
+				A716759D07259A1BB0C288DE219AFEA2 /* Utils.swift */,
+				44B85BDB7586E1132A51156A2C3F9B10 /* WeakObjectBox.swift */,
+				05F879BA2F6B3B2C1AA0FBEFE11C22DA /* Support Files */,
+			);
+			name = MaLiang;
+			path = MaLiang;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				64123C8D828191A9C912A3169D4E26C4 /* Pods */,
+				6D18C3616670FA533CE5855E89CD301F /* Products */,
+				7A2284A8E8A3811989EADAF85986EA16 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0F28CD0864106D177D9F2B1D1D21D5B9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D7876864A1A0E79098ED0A27DA021B2 /* MaLiang-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		246E547169B35C80355804F9467BC002 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA26B94150D9737A052424F1F5BCFC53 /* Pods-Katib-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		19AC00B921DB6E86DC1397A02AD78B78 /* Pods-Katib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC67F1D7B34A5E4D151F8B3E5083BD16 /* Build configuration list for PBXNativeTarget "Pods-Katib" */;
+			buildPhases = (
+				246E547169B35C80355804F9467BC002 /* Headers */,
+				A5A808A4A6B8A5FA7384A8A2CFE15AF7 /* Sources */,
+				9E3EF865BF7D80CC2534872F7A0CEEF7 /* Frameworks */,
+				F1C71E62C43ED9FB87EDD698020269B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFF63BAE4EFD8C9B4C6FA91CCACA752B /* PBXTargetDependency */,
+			);
+			name = "Pods-Katib";
+			productName = Pods_Katib;
+			productReference = EEC5AD08B7E5390980C9C7E1B81D887C /* Pods-Katib */;
+			productType = "com.apple.product-type.framework";
+		};
+		E631E27C5D04BC21AB3851D6CCE8E73E /* MaLiang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5DD056A12FB7C069E13FE7392659A46 /* Build configuration list for PBXNativeTarget "MaLiang" */;
+			buildPhases = (
+				0F28CD0864106D177D9F2B1D1D21D5B9 /* Headers */,
+				9CB2F1E7A1125D18A4D7E18A4ABFB11C /* Sources */,
+				DDB997478737F09C129F8C65D7187EFE /* Frameworks */,
+				CDACFD358DB3342815B481EFF3CE06F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MaLiang;
+			productName = MaLiang;
+			productReference = AA74F5742B646E2D8FEB75C54F1F2362 /* MaLiang */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 6D18C3616670FA533CE5855E89CD301F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E631E27C5D04BC21AB3851D6CCE8E73E /* MaLiang */,
+				19AC00B921DB6E86DC1397A02AD78B78 /* Pods-Katib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDACFD358DB3342815B481EFF3CE06F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1C71E62C43ED9FB87EDD698020269B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9CB2F1E7A1125D18A4D7E18A4ABFB11C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F9D351E512586960AFF78926A19C663 /* ActionObserver.swift in Sources */,
+				0BD9F96DCC2891908F6F4DF2367BEC7B /* BezierGenerator.swift in Sources */,
+				E6A6F98B9F3A86987CC0714A8BFF3647 /* Brush.swift in Sources */,
+				C15F9543E5FC23E579795C3825840866 /* Canvas.swift in Sources */,
+				9F8D33E55F9CCB3FA399FC056E63849F /* CanvasData.swift in Sources */,
+				1DD97B4BCBA3A2DD3F49FD00AC124897 /* Chartlet.swift in Sources */,
+				4BAFF998649EC92105C6BEB2021DD763 /* ChartletBrush.swift in Sources */,
+				ADD5840CA91CE91CEEAB5DF7E06E7E52 /* DataExporter.swift in Sources */,
+				99ED180F2D3ED2FB74CF575600C1AF0B /* DataImporter.swift in Sources */,
+				CDE1C4F9F48E4FCC1CB80A5F6F0EB664 /* DataObserver.swift in Sources */,
+				6A93AE50C525D13597ABF205C651AFEE /* Document.swift in Sources */,
+				4F8A451EE2833A6C159A001E8A2E9356 /* ElementGroup.swift in Sources */,
+				ED842AF85FA49CE0197EA33AA957DCD4 /* Eraser.swift in Sources */,
+				5FA575D3C2C8F5E9492F07AAD3101028 /* GlowingBrush.swift in Sources */,
+				37AF09E9D635424C4EC36B2F8DF09C9D /* LineStrip.swift in Sources */,
+				4E3BF6ECA8496D4EF8B00A8FAA3FE075 /* MaLiang-dummy.m in Sources */,
+				C0A82BC6547D5010C166375FDABBA213 /* Maths.swift in Sources */,
+				44E0D9C61D78011F5237944EF60DABE5 /* MetalView.swift in Sources */,
+				D454EF3B88E9A0611D02B46D2E77C72A /* MLColor.swift in Sources */,
+				3EB61EB106B3BA19865571B58D47E82D /* MLError.swift in Sources */,
+				7FE90A6C9901E92A5504D963458ADBA2 /* MLLine.swift in Sources */,
+				BA6DCE963C5C17ECC9D620F3BDAC7F41 /* MLTexture.swift in Sources */,
+				CB7C6F29A9EC6AAEB6F0257F3C766F74 /* PaintingGestureRecognizer.swift in Sources */,
+				731BF2E648564E64B75E3DD94984C375 /* Printer.swift in Sources */,
+				B6647A3E5B19ECF0628007E0D15A815E /* Renderer.swift in Sources */,
+				374C0F54464453AF25FD76FD0BAD1A5C /* RenderTarget.swift in Sources */,
+				B507A144E38EEB2A78895543F40318FC /* ScrollableCanvas.swift in Sources */,
+				22B73D3AC14649EC23890BFCC2C0B975 /* Shaders.metal in Sources */,
+				3575FBBEA4C3441FA6977C91E9DB3F4E /* SnapshotTarget.swift in Sources */,
+				05E40F3F072C3767F03F52C971D23642 /* Utils.swift in Sources */,
+				081B742BB4334E5254304B72CEBDBE94 /* WeakObjectBox.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5A808A4A6B8A5FA7384A8A2CFE15AF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				221B1EC2C03133E0F659A7481DED692C /* Pods-Katib-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CFF63BAE4EFD8C9B4C6FA91CCACA752B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MaLiang;
+			target = E631E27C5D04BC21AB3851D6CCE8E73E /* MaLiang */;
+			targetProxy = 6209B500FB02EFB39F424A91044B09E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1C8A36EBB7C31EC1F9FEB78B92E2E02E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C76389560AFC013750B92D7C6788705 /* MaLiang.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MaLiang/MaLiang-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MaLiang/MaLiang-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MaLiang/MaLiang.modulemap";
+				PRODUCT_MODULE_NAME = MaLiang;
+				PRODUCT_NAME = MaLiang;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		47E2567DCEDF6C3845A8798205F6FDB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4AE1567D3953AD29688A3F18C4C02C1 /* MaLiang.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MaLiang/MaLiang-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MaLiang/MaLiang-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MaLiang/MaLiang.modulemap";
+				PRODUCT_MODULE_NAME = MaLiang;
+				PRODUCT_NAME = MaLiang;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8F3DF592A7A09BD0BB864FC98D051767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B5A3B55DC69C3A37840FEEE007E9613 /* Pods-Katib.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Katib/Pods-Katib-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Katib/Pods-Katib.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		901EDF4689D2092A1D695A4C8833B7F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13265E485719BA3C3C8365B7D59580B0 /* Pods-Katib.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Katib/Pods-Katib-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Katib/Pods-Katib.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5DD056A12FB7C069E13FE7392659A46 /* Build configuration list for PBXNativeTarget "MaLiang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47E2567DCEDF6C3845A8798205F6FDB3 /* Debug */,
+				1C8A36EBB7C31EC1F9FEB78B92E2E02E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC67F1D7B34A5E4D151F8B3E5083BD16 /* Build configuration list for PBXNativeTarget "Pods-Katib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				901EDF4689D2092A1D695A4C8833B7F9 /* Debug */,
+				8F3DF592A7A09BD0BB864FC98D051767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

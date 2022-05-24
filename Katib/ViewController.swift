@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MaLiang
 
 class ViewController: UIViewController {
 

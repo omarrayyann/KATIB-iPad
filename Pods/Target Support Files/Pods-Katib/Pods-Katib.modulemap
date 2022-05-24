@@ -1,0 +1,6 @@
+framework module Pods_Katib {
+  umbrella header "Pods-Katib-umbrella.h"
+
+  export *
+  module * { export * }
+}
