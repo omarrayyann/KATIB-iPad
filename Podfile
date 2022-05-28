@@ -8,5 +8,11 @@ target 'Katib' do
 pod 'MaLiang'
 
   # Pods for Katib
+pod 'Firebase/Firestore'
+pod 'Firebase/Analytics'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
+pod 'Firebase/Auth'
+pod 'IQKeyboardManagerSwift'
 
 end

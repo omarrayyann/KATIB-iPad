@@ -10,6 +10,7 @@ import MaLiang
 
 class DrawingViewController: UIViewController {
 
+    
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
@@ -19,20 +20,21 @@ class DrawingViewController: UIViewController {
         drawingCanvas.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
         drawingCanvas.layer.borderWidth = 1.5
         drawingCanvas.layer.cornerRadius = drawingCanvas.frame.height/50
-        drawingCanvas.currentBrush.pointSize = 10
+        drawingCanvas.currentBrush.pointSize = 7
         undoButton.layer.borderColor = CGColor(red: 148/255, green: 17/255, blue: 0, alpha: 1)
         undoButton.layer.borderWidth = 1.5
         undoButton.layer.cornerRadius = undoButton.frame.height/50
         doneButton.layer.cornerRadius = doneButton.frame.height/2
         undoButton.layer.cornerRadius = undoButton.frame.height/2
         clearButton.layer.cornerRadius = clearButton.frame.height/2
-        doneButton.isUserInteractionEnabled = false
+//        doneButton.isUserInteractionEnabled = false
         doneButton.alpha = 0.75
-
+        
     }
     
     @IBAction func clickedUndo(_ sender: Any) {
         drawingCanvas.undo()
+        
     }
     
     @IBAction func clickedClear(_ sender: Any) {
@@ -41,5 +43,14 @@ class DrawingViewController: UIViewController {
         doneButton.alpha = 0.75
     }
     
-
+    @IBAction func clickedBack(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
+    
+    @IBAction func clickedDone(_ sender: Any) {
+        var lastLine = drawingCanvas.data.elements[drawingCanvas.data.elements.count-1] as? LineStrip
+        print(lastLine?.getVertexes())
+    }
+    
 }

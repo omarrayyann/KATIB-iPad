@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "download-icon-arrows+circle+direction+forward+next+right+icon-1320085939006970867_32.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

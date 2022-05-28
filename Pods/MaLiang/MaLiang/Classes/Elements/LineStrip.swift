@@ -15,6 +15,7 @@ open class LineStrip: CanvasElement {
     /// element index
     public var index: Int = 0
     
+    public var vertices: [[CGFloat]] = []
     /// identifier of bursh used to render this line strip
     public var brushName: String?
     
@@ -62,6 +63,10 @@ open class LineStrip: CanvasElement {
     
     private var vertex_buffer: MTLBuffer?
     
+    public func getVertexes()->[[CGFloat]]{
+        return vertices
+    }
+    
     private func remakBuffer(rotation: Brush.Rotation) {
         
         guard lines.count > 0 else {
@@ -77,7 +82,6 @@ open class LineStrip: CanvasElement {
             var line = line
             line.begin = line.begin * scale
             line.end = line.end * scale
-
             // fix opacity of line color
             let overlapping = max(1, line.pointSize / line.pointStep)
             var renderingColor = line.color ?? color
@@ -97,6 +101,7 @@ open class LineStrip: CanvasElement {
                 }
                 
                 vertexes.append(Point(x: x, y: y, color: renderingColor, size: line.pointSize * scale, angle: angle))
+                print([x, y])
             }
         }
         

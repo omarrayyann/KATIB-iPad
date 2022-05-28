@@ -15,9 +15,20 @@
 		4501E9D5283CC7910098A376 /* Katib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4501E9D3283CC7910098A376 /* Katib.xcdatamodeld */; };
 		4501E9D7283CC7930098A376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4501E9D6283CC7930098A376 /* Assets.xcassets */; };
 		4501E9DA283CC7930098A376 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4501E9D8283CC7930098A376 /* LaunchScreen.storyboard */; };
+		451F7B4A283E56FC00AE93DC /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F7B49283E56FC00AE93DC /* Patient.swift */; };
+		451F7B4D283E57EA00AE93DC /* PatientCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F7B4B283E57EA00AE93DC /* PatientCollectionViewCell.swift */; };
+		451F7B4E283E57EA00AE93DC /* PatientCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 451F7B4C283E57EA00AE93DC /* PatientCollectionViewCell.xib */; };
+		451F7B50283E665400AE93DC /* MyPatientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F7B4F283E665400AE93DC /* MyPatientsViewController.swift */; };
+		451F7B52283F628B00AE93DC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F7B51283F628B00AE93DC /* Data.swift */; };
+		451F7B54283F669300AE93DC /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F7B53283F669300AE93DC /* PatientViewController.swift */; };
+		4547B98A28410E7D00D4D4BC /* CoordinatePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4547B98928410E7D00D4D4BC /* CoordinatePoint.swift */; };
 		455C0803283D0D2900F8ED53 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C0802283D0D2900F8ED53 /* DrawingViewController.swift */; };
 		45A73C62283CEB9F00F16448 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A73C61283CEB9F00F16448 /* MainViewController.swift */; };
 		45A73C64283CEC5A00F16448 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A73C63283CEC5A00F16448 /* Extensions.swift */; };
+		45CD2506284214D300B744BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45CD2505284214D300B744BC /* GoogleService-Info.plist */; };
+		45CD2508284222C900B744BC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CD2507284222C900B744BC /* RegisterViewController.swift */; };
+		45CD250A2842489600B744BC /* ProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CD25092842489600B744BC /* ProfilePictureViewController.swift */; };
+		45CD250C2842565E00B744BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CD250B2842565E00B744BC /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +42,20 @@
 		4501E9D6283CC7930098A376 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4501E9D9283CC7930098A376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4501E9DB283CC7930098A376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		451F7B49283E56FC00AE93DC /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		451F7B4B283E57EA00AE93DC /* PatientCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCollectionViewCell.swift; sourceTree = "<group>"; };
+		451F7B4C283E57EA00AE93DC /* PatientCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientCollectionViewCell.xib; sourceTree = "<group>"; };
+		451F7B4F283E665400AE93DC /* MyPatientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPatientsViewController.swift; sourceTree = "<group>"; };
+		451F7B51283F628B00AE93DC /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		451F7B53283F669300AE93DC /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
+		4547B98928410E7D00D4D4BC /* CoordinatePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatePoint.swift; sourceTree = "<group>"; };
 		455C0802283D0D2900F8ED53 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		45A73C61283CEB9F00F16448 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		45A73C63283CEC5A00F16448 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		45CD2505284214D300B744BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/untitled folder 2/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45CD2507284222C900B744BC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		45CD25092842489600B744BC /* ProfilePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureViewController.swift; sourceTree = "<group>"; };
+		45CD250B2842565E00B744BC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		93A5049F5A0C62E201837FD3 /* Pods_Katib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Katib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DD84DF289AA45A7131279E /* Pods-Katib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Katib.debug.xcconfig"; path = "Target Support Files/Pods-Katib/Pods-Katib.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,16 +94,27 @@
 			isa = PBXGroup;
 			children = (
 				4501E9CA283CC7910098A376 /* AppDelegate.swift */,
+				451F7B4F283E665400AE93DC /* MyPatientsViewController.swift */,
 				4501E9CC283CC7910098A376 /* SceneDelegate.swift */,
 				4501E9CE283CC7910098A376 /* ViewController.swift */,
 				4501E9D0283CC7910098A376 /* Main.storyboard */,
+				45CD250B2842565E00B744BC /* ProfileViewController.swift */,
+				45CD25092842489600B744BC /* ProfilePictureViewController.swift */,
+				45CD2507284222C900B744BC /* RegisterViewController.swift */,
+				45CD2505284214D300B744BC /* GoogleService-Info.plist */,
+				451F7B53283F669300AE93DC /* PatientViewController.swift */,
 				455C0802283D0D2900F8ED53 /* DrawingViewController.swift */,
+				4547B98928410E7D00D4D4BC /* CoordinatePoint.swift */,
 				45A73C61283CEB9F00F16448 /* MainViewController.swift */,
 				45A73C63283CEC5A00F16448 /* Extensions.swift */,
 				4501E9D6283CC7930098A376 /* Assets.xcassets */,
 				4501E9D8283CC7930098A376 /* LaunchScreen.storyboard */,
 				4501E9DB283CC7930098A376 /* Info.plist */,
 				4501E9D3283CC7910098A376 /* Katib.xcdatamodeld */,
+				451F7B49283E56FC00AE93DC /* Patient.swift */,
+				451F7B4B283E57EA00AE93DC /* PatientCollectionViewCell.swift */,
+				451F7B4C283E57EA00AE93DC /* PatientCollectionViewCell.xib */,
+				451F7B51283F628B00AE93DC /* Data.swift */,
 			);
 			path = Katib;
 			sourceTree = "<group>";
@@ -165,6 +198,8 @@
 			files = (
 				4501E9DA283CC7930098A376 /* LaunchScreen.storyboard in Resources */,
 				4501E9D7283CC7930098A376 /* Assets.xcassets in Resources */,
+				45CD2506284214D300B744BC /* GoogleService-Info.plist in Resources */,
+				451F7B4E283E57EA00AE93DC /* PatientCollectionViewCell.xib in Resources */,
 				4501E9D2283CC7910098A376 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,10 +253,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				451F7B4D283E57EA00AE93DC /* PatientCollectionViewCell.swift in Sources */,
+				45CD250A2842489600B744BC /* ProfilePictureViewController.swift in Sources */,
 				4501E9CF283CC7910098A376 /* ViewController.swift in Sources */,
+				451F7B54283F669300AE93DC /* PatientViewController.swift in Sources */,
 				45A73C64283CEC5A00F16448 /* Extensions.swift in Sources */,
+				4547B98A28410E7D00D4D4BC /* CoordinatePoint.swift in Sources */,
+				45CD250C2842565E00B744BC /* ProfileViewController.swift in Sources */,
+				451F7B4A283E56FC00AE93DC /* Patient.swift in Sources */,
+				451F7B52283F628B00AE93DC /* Data.swift in Sources */,
 				4501E9D5283CC7910098A376 /* Katib.xcdatamodeld in Sources */,
 				455C0803283D0D2900F8ED53 /* DrawingViewController.swift in Sources */,
+				45CD2508284222C900B744BC /* RegisterViewController.swift in Sources */,
+				451F7B50283E665400AE93DC /* MyPatientsViewController.swift in Sources */,
 				4501E9CB283CC7910098A376 /* AppDelegate.swift in Sources */,
 				4501E9CD283CC7910098A376 /* SceneDelegate.swift in Sources */,
 				45A73C62283CEB9F00F16448 /* MainViewController.swift in Sources */,

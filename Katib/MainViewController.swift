@@ -6,17 +6,32 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MainViewController: UIViewController {
 
 
     @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var welcomeMessage: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         profilePicture.layer.cornerRadius = profilePicture.frame.height/2
+            
         profilePicture.layer.borderWidth = 1
         profilePicture.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
+        profilePicture.layer.masksToBounds = true
+        
+        if (Auth.auth().currentUser?.uid) != nil {
   
+        }
+        
+        else{
+            
+            performSegue(withIdentifier: "toSign", sender: self)
+            
+        }
         
         // Do any additional setup after loading the view.
     }
