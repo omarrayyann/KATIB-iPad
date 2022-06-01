@@ -18,7 +18,7 @@ class PatientViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        profilePicture.image = patient.photo
+//        profilePicture.image = patient.photo
         profilePicture.layer.borderWidth = 1
         profilePicture.layer.borderColor = CGColor.init(red: 0, green: 0, blue: 0, alpha: 1)
         profilePicture.layer.cornerRadius = profilePicture.frame.height / 20

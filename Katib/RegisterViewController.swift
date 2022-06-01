@@ -8,15 +8,13 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
+import NVActivityIndicatorView
 
 class RegisterViewController: UIViewController {
 
-    @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet weak var firstNameShadow: UIView!
+   
     
-    @IBOutlet weak var lastNameTextField: UITextField!
-    @IBOutlet weak var lastNameShadow: UIView!
-    
+    @IBOutlet weak var indicator: NVActivityIndicatorView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var emailShadow: UIView!
     
@@ -29,20 +27,21 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var confirmPasswordShadow: UIView!
     
+    @IBOutlet var wholeView: UIView!
     @IBOutlet weak var registerButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        firstNameShadow.shadow_custom_1()
-        lastNameShadow.shadow_custom_1()
+        
+        indicator.startAnimating()
+        indicator.isHidden = true
         emailShadow.shadow_custom_1()
         usernameShadow.shadow_custom_1()
         passwordShadow.shadow_custom_1()
         confirmPasswordShadow.shadow_custom_1()
         registerButton.shadow_custom_1()
 
-        firstNameTextField.textField_custom_1()
-        lastNameTextField.textField_custom_1()
+
         emailTextField.textField_custom_1()
         usernameTextField.textField_custom_1()
         passwordTextField.textField_custom_1()
@@ -52,8 +51,7 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func clickedRegister(_ sender: Any) {
-    }
+   
     
     
     let db = Firestore.firestore()
@@ -61,16 +59,7 @@ class RegisterViewController: UIViewController {
     @IBAction func login(_ sender: Any) {
         self.dismiss(animated: true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
     @IBOutlet weak var errorLabel: UILabel!
     func isValidEmail(_ email: String) -> Bool {
            let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -82,8 +71,9 @@ class RegisterViewController: UIViewController {
        @IBAction func registerPressed(_ sender: Any) {
 
            view.endEditing(true)
+           wholeView.isUserInteractionEnabled = false
+           indicator.isHidden = false
 
-           
            errorLabel.isHidden = true
            if emailTextField.text != "" && usernameTextField.text != ""  && passwordTextField.text != "" && confirmPasswordTextField.text != ""
            {
@@ -108,49 +98,64 @@ class RegisterViewController: UIViewController {
 
                
                if bob == 1 {
+                   indicator.isHidden = true
                    errorLabel.text = "Usernames can only have characters, numbers, dots and underscores"
                    errorLabel.isHidden = false
                    errorLabel.shake()
+                   wholeView.isUserInteractionEnabled = true
+                   
                }
                
                else if usernameTextField.text?.contains(" ") == true {
+                   indicator.isHidden = true
                    errorLabel.text = "Username can't contain spaces"
                    errorLabel.isHidden = false
                    errorLabel.shake()
+                   wholeView.isUserInteractionEnabled = true
                }
                else if usernameTextField.text!.count < 4 {
+                   indicator.isHidden = true
                    errorLabel.text = "Username must be at least 4 characters"
                    errorLabel.isHidden = false
                    errorLabel.shake()
+                   wholeView.isUserInteractionEnabled = true
                    
                }
                else if usernameTextField.text!.count > 25 {
+                   indicator.isHidden = true
                    errorLabel.text = "Username must be less than 25 characters"
                    errorLabel.isHidden = false
                    errorLabel.shake()
+                   wholeView.isUserInteractionEnabled = true
                    
                }
                else if passwordTextField.text?.contains(" ") == true {
-    
+                   indicator.isHidden = true
                    errorLabel.text = "Password can't contain spaces"
                    errorLabel.isHidden = false
                    errorLabel.shake()
+                   wholeView.isUserInteractionEnabled = true
                }
                else if confirmPasswordTextField.text != confirmPasswordTextField.text {
+                   indicator.isHidden = true
                    errorLabel.text = "Password don't match"
                    errorLabel.isHidden = false
                    errorLabel.shake()
+                   wholeView.isUserInteractionEnabled = true
                }
                else if isValidEmail(emailTextField.text ?? "") == false{
+                   indicator.isHidden = true
                    errorLabel.text = "Enter a valid email"
                    errorLabel.isHidden = false
                    errorLabel.shake()
+                   wholeView.isUserInteractionEnabled = true
                }
                
               else {db.collection("Usernames").document("Usernames").getDocument { [self] (snapshot, error) in
                    if let e = error {
                        print(e)
-   
+                       indicator.isHidden = true
+                       wholeView.isUserInteractionEnabled = true
                    }
                    else{
                        
@@ -159,17 +164,19 @@ class RegisterViewController: UIViewController {
                        if usernames?.contains(usernameTextField.text!) == false {Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { [self] (authResult, error) in
                            if let e = error {
                                if e.localizedDescription.contains("email address is already") == true {
+                                   indicator.isHidden = true
                                    errorLabel.isHidden = false
                                    errorLabel.text = "Email Used"
                                    errorLabel.shake()
+                                   wholeView.isUserInteractionEnabled = true
 
                                }
                                else{
-                                   
-
+                                   indicator.isHidden = true
                                    errorLabel.isHidden = false
                                    errorLabel.text = "Enter a valid password of at least 6 characters"
                                    errorLabel.shake()
+                                   wholeView.isUserInteractionEnabled = true
                                }
                                print(e.localizedDescription)
                                
@@ -180,7 +187,7 @@ class RegisterViewController: UIViewController {
                                
                                
                                
-                               insertNewUser(email: emailTextField.text!, username: usernameTextField.text!, UID: authResult!.user.uid, firstName: firstNameTextField.text!, lastName: lastNameTextField.text!)
+                               insertNewUser(email: emailTextField.text!, username: usernameTextField.text!, UID: authResult!.user.uid, firstName: "", lastName: "")
                                {(inserted) in
                                    if inserted {
                                        // success
@@ -197,9 +204,11 @@ class RegisterViewController: UIViewController {
                            
                            }}
                        else{
+                           indicator.isHidden = true
                            errorLabel.isHidden = false
                            errorLabel.text = "Username Used"
                            errorLabel.shake()
+                           wholeView.isUserInteractionEnabled = true
 
                        }
                    }
@@ -215,24 +224,28 @@ class RegisterViewController: UIViewController {
            }
            else {
                if emailTextField.text == "" {
-
+                   indicator.isHidden = true
                    errorLabel.text = "Enter an email"
                    errorLabel.isHidden = false
                    errorLabel.shake()
+                   wholeView.isUserInteractionEnabled = true
 
                }
                else if usernameTextField.text == "" {
-
+                   indicator.isHidden = true
                    errorLabel.text = "Enter a username"
                    errorLabel.isHidden = false
                    errorLabel.shake()
+                   wholeView.isUserInteractionEnabled = true
 
                }
                else if passwordTextField.text == "" {
-
+                   indicator.isHidden = true
                    errorLabel.text = "Enter a password"
                    errorLabel.isHidden = false
                    errorLabel.shake()
+                   wholeView.isUserInteractionEnabled = true
+
 
                }
 
@@ -242,7 +255,7 @@ class RegisterViewController: UIViewController {
        
        
     public func insertNewUser (email: String, username: String, UID: String, firstName: String, lastName: String, completion: @escaping (Bool) -> Void) {
-        db.collection("Doctors").document(UID).setData(["username": username, "email": email, "uid": UID, "firstName": firstName, "lastName": lastName, "image": "non"]) { err in
+        db.collection("Doctors").document(UID).setData(["username": username, "email": email, "uid": UID, "firstName": firstName, "lastName": lastName, "profilePicture": "non", "patients": []]) { err in
                    if let err = err {
                        print("Error writing document: \(err)")
                        completion(false)
@@ -252,6 +265,7 @@ class RegisterViewController: UIViewController {
                        self.db.collection("Usernames").document("Usernames").updateData(["usernames": FieldValue.arrayUnion([username])]) { (error) in
                            if let e = error {
                                print(e)
+                               
                            }
                            else{
                                completion(true)

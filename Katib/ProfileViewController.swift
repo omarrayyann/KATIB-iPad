@@ -15,14 +15,13 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
-    
+   
     @IBAction func clickedSignOut(_ sender: Any) {
         print("clicked")
         logoutUser { Bool in
             if Bool == true {
                 
-                
+                Data.shared.fetchedData = false
                 performSegue(withIdentifier: "toSign2", sender: self)
                 
                 

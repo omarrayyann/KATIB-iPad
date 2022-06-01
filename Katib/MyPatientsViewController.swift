@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol PatientChoiceDelegate{
     func clicked_patient(patient: Patient)
@@ -14,12 +15,17 @@ protocol PatientChoiceDelegate{
 class MyPatientsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, PatientChoiceDelegate {
     
     func clicked_patient(patient: Patient){
+        if patient.firstName == "additionButton"{
+            // clicked add patient
+            
+        }
+        else{
         chosen_patient = patient
-        performSegue(withIdentifier: "toPatient", sender: self)
+            performSegue(withIdentifier: "toPatient", sender: self)}
     }
     
     var patients: [Patient] = []
-    var chosen_patient: Patient = Patient(firstName: "", lastName: "", age: 0, gender: "", photo:  #imageLiteral(resourceName: "Omar"))
+    var chosen_patient: Patient = Patient(firstName: "", lastName: "", age: 0, gender: "", uid: "", photo: "", doctor: Doctor(firstName: "", lastName: "", username: "", email: "", uid: "", photo: "", patientsUID: []))
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (patients.count + 1)
@@ -33,7 +39,7 @@ class MyPatientsViewController: UIViewController, UICollectionViewDataSource, UI
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "patient", for: indexPath as IndexPath) as! PatientCollectionViewCell
             cell.patient = patient
             cell.nameLabel.text = "\(patient.firstName) \(patient.lastName)"
-            cell.profilePhoto.image = patient.photo
+            cell.profilePhoto.kf.setImage(with: URL(string: patient.photo))
             cell.ageLabel.text = "\(patient.age) years old"
             cell.delegate = self
             return cell
@@ -41,6 +47,7 @@ class MyPatientsViewController: UIViewController, UICollectionViewDataSource, UI
         }
         else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "patient", for: indexPath as IndexPath) as! PatientCollectionViewCell
+            cell.patient.firstName = "additionButton"
             cell.wholeView.isHidden = true
             return cell
         }
@@ -49,7 +56,7 @@ class MyPatientsViewController: UIViewController, UICollectionViewDataSource, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        patients = Data.shared.patients
+//        patients = Data.shared.patients
         collectionView.register(UINib(nibName: "PatientCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "patient" )
         let width = (windowWidth()-100)/4
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout

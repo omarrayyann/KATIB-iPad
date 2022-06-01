@@ -16,8 +16,7 @@ class PatientCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ageLabel: UILabel!
     
     var delegate: PatientChoiceDelegate!
-
-    var patient = Patient(firstName: "", lastName: "ss", age: 0, gender: "", photo: #imageLiteral(resourceName: "Doctor"))
+    var patient = Patient(firstName: "", lastName: "ss", age: 0, gender: "", uid: "", photo: "", doctor: Doctor(firstName: "", lastName: "", username: "", email: "", uid: "", photo: "", patientsUID: []))
     
     override func awakeFromNib() {
         super.awakeFromNib()

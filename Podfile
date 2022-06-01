@@ -14,5 +14,8 @@ pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'Firebase/Auth'
 pod 'IQKeyboardManagerSwift'
+pod 'Kingfisher', :git => 'https://github.com/onevcat/Kingfisher.git', :branch => 'master'
+pod 'MaterialActivityIndicator'
+pod 'NVActivityIndicatorView'
 
 end

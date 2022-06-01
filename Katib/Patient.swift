@@ -13,5 +13,8 @@ struct Patient{
     var lastName: String
     var age: Int
     var gender: String
-    var photo: UIImage
+    var uid: String
+    var photo: String
+    var doctor: Doctor
+
 }

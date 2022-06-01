@@ -336,13 +336,18 @@ PODS:
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.5.0)
   - IQKeyboardManagerSwift (6.5.6)
+  - Kingfisher (7.2.2)
   - leveldb-library (1.22)
   - MaLiang (2.9.2)
+  - MaterialActivityIndicator (0.0.6)
   - nanopb (2.30907.0):
     - nanopb/decode (= 2.30907.0)
     - nanopb/encode (= 2.30907.0)
   - nanopb/decode (2.30907.0)
   - nanopb/encode (2.30907.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - PromisesObjC (1.2.12)
 
 DEPENDENCIES:
@@ -352,7 +357,10 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Storage
   - IQKeyboardManagerSwift
+  - Kingfisher (from `https://github.com/onevcat/Kingfisher.git`, branch `master`)
   - MaLiang
+  - MaterialActivityIndicator
+  - NVActivityIndicatorView
 
 SPEC REPOS:
   trunk:
@@ -376,8 +384,20 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - leveldb-library
     - MaLiang
+    - MaterialActivityIndicator
     - nanopb
+    - NVActivityIndicatorView
     - PromisesObjC
+
+EXTERNAL SOURCES:
+  Kingfisher:
+    :branch: master
+    :git: https://github.com/onevcat/Kingfisher.git
+
+CHECKOUT OPTIONS:
+  Kingfisher:
+    :commit: 59eb199fdb8dd47733624e8b0277822d0232579e
+    :git: https://github.com/onevcat/Kingfisher.git
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -398,11 +418,14 @@ SPEC CHECKSUMS:
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  Kingfisher: 184d4d1a8c36666e663caf8e08abe87898595c53
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   MaLiang: 7cf6c70e37577b5ec1b34add37fa6d58808f5451
+  MaterialActivityIndicator: 5061a52fadf7d22533734f2d34806311331bc424
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: c98d9f3abc1de09406680427892b4530faddb147
+PODFILE CHECKSUM: bca77c4ae4c31514ed96e72f4b5e852e37e35ff0
 
 COCOAPODS: 1.11.3

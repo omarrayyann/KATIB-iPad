@@ -9,29 +9,63 @@ import UIKit
 import FirebaseStorage
 import FirebaseFirestore
 import FirebaseAuth
+import NVActivityIndicatorView
+import Kingfisher
 
 class ProfilePictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    @IBOutlet weak var indicator: UIActivityIndicatorView!
+
     
     let db = Firestore.firestore()
     
+    @IBOutlet weak var indicator: NVActivityIndicatorView!
+    @IBOutlet weak var wholeFirstName: UIView!
+    @IBOutlet weak var wholeLastName: UIView!
+    @IBOutlet weak var lastNameShadow: UIView!
+    @IBOutlet weak var firstNameShadow: UIView!
+    @IBOutlet weak var lastNameLabel: UITextField!
+    @IBOutlet weak var firstNameLabel: UITextField!
+    @IBOutlet weak var profilePictureView: UIView!
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var addPictureButton: UIButton!
     @IBOutlet weak var profilePicture: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        profilePicture.layer.cornerRadius = profilePicture.frame.height/2
-        profilePicture.layer.borderWidth = 1
-        profilePicture.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-        addPictureButton.layer.cornerRadius = addPictureButton.frame.height/2
+//        loadPrevious()
+        indicator.startAnimating()
+        indicator.isHidden = true
+        profilePictureView.layer.cornerRadius = profilePictureView.frame.height/2
+        profilePictureView.layer.borderWidth = 1
+        profilePictureView.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
         skipButton.layer.cornerRadius = skipButton.frame.height/2
-
-        
+        profilePicture.layer.masksToBounds = true
+        firstNameLabel.textField_custom_1()
+        lastNameLabel.textField_custom_1()
+        firstNameShadow.shadow_custom_1()
+        lastNameShadow.shadow_custom_1()
 
         // Do any additional setup after loading the view.
     }
     
 
+    func loadPrevious(){
+        indicator.isHidden = false
+        wholeView.isUserInteractionEnabled = false
+        if let uid = Auth.auth().currentUser?.uid{
+            db.collection("Doctors").document(uid).getDocument { snapshot, error in
+                if let firstName = snapshot?.data()?["firstName"] as? String, let lastName = snapshot?.data()?["lastName"] as? String, let photoURL = snapshot?.data()?["profilePicture"] as? String {
+                    self.firstNameLabel.text = firstName
+                    self.lastNameLabel.text = lastName
+                    self.profilePicture.kf.setImage(with: URL(string: photoURL))
+                    self.indicator.isHidden = true
+                    self.wholeView.isUserInteractionEnabled = true
+                }
+            }}
+        else{
+            indicator.isHidden = true
+            wholeView.isUserInteractionEnabled = true
+        }
+    }
     
     @IBAction func clickedAddPicture(_ sender: Any) {
         
@@ -59,11 +93,12 @@ class ProfilePictureViewController: UIViewController, UIImagePickerControllerDel
     }
         
     
+    @IBOutlet var wholeView: UIView!
     
     @IBAction func clickedSkip(_ sender: Any) {
         // clicked save
-        indicator.startAnimating()
-        skipButton.isHidden = true
+        indicator.isHidden = false
+        self.wholeView.isUserInteractionEnabled = false
         let photoIdString = NSUUID().uuidString
                    let firstPhotoID = photoIdString
 
@@ -74,6 +109,7 @@ class ProfilePictureViewController: UIViewController, UIImagePickerControllerDel
                            print(e)
                            self.indicator.stopAnimating()
                            self.skipButton.isHidden = false
+                           self.wholeView.isUserInteractionEnabled = true
                            
                        }
                        else{
@@ -84,15 +120,19 @@ class ProfilePictureViewController: UIViewController, UIImagePickerControllerDel
                                    print(e)
                                    self.dismiss(animated: true, completion: nil)
                                    self.indicator.stopAnimating()
+                                   self.indicator.isHidden = true
                                    self.skipButton.isHidden = false
+                                   self.wholeView.isUserInteractionEnabled = true
                               
                                }
                                else if let urlToFirstImage = url?.absoluteString {
                                    
                                    if let dotorUID = Auth.auth().currentUser?.uid {
-                                       self.db.collection("Doctors").document(dotorUID).updateData(["profilePicture": urlToFirstImage]) { error in
+                                       self.db.collection("Doctors").document(dotorUID).updateData(["profilePicture": urlToFirstImage, "firstName": self.firstNameLabel.text ?? "", "lastName": self.lastNameLabel.text ?? ""]) { error in
                                            if let e = error {
                                                print(e)
+                                               self.indicator.isHidden = true
+                                               self.wholeView.isUserInteractionEnabled = true
                                            }
                                            else{
                                                // DONE
