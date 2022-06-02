@@ -61,12 +61,7 @@ class RegisterViewController: UIViewController {
     }
    
     @IBOutlet weak var errorLabel: UILabel!
-    func isValidEmail(_ email: String) -> Bool {
-           let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 
-           let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-           return emailPred.evaluate(with: email)
-       }
 
        @IBAction func registerPressed(_ sender: Any) {
 
@@ -161,7 +156,9 @@ class RegisterViewController: UIViewController {
                        
                        let usernames = snapshot?.data()!["usernames"] as? [String]
                        
-                       if usernames?.contains(usernameTextField.text!) == false {Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { [self] (authResult, error) in
+                       if usernames?.contains(usernameTextField.text!) == false {
+                           
+                           Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { [self] (authResult, error) in
                            if let e = error {
                                if e.localizedDescription.contains("email address is already") == true {
                                    indicator.isHidden = true

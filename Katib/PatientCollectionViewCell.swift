@@ -13,10 +13,10 @@ class PatientCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var wholeView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var profilePhoto: UIImageView!
-    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var lastActiveLabel: UILabel!
     
     var delegate: PatientChoiceDelegate!
-    var patient = Patient(firstName: "", lastName: "ss", age: 0, gender: "", uid: "", photo: "", doctor: Doctor(firstName: "", lastName: "", username: "", email: "", uid: "", photo: "", patientsUID: []))
+    var patient = Patient(firstName: "", lastName: "ss", photo: "", doctor: Doctor(firstName: "", lastName: "", username: "", email: "", uid: "", photo: "", patientsUID: []), finishedTasks: [], assignedTasks: [], lastActive: Date.now)
     
     override func awakeFromNib() {
         super.awakeFromNib()

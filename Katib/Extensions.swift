@@ -41,6 +41,12 @@ extension UITextField{
         self.leftViewMode = .always
 
     }
+    func left_text_field_indent(width: Double){
+
+        self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: self.frame.height))
+        self.leftViewMode = .always
+
+    }
 }
 
 extension UIImage {
@@ -88,6 +94,16 @@ extension UIImage {
   
 
 }
+
+extension Date {
+        func timeAgoDisplay() -> String {
+            let formatter = RelativeDateTimeFormatter()
+            formatter.unitsStyle = .full
+            return formatter.localizedString(for: self, relativeTo: Date())
+        }
+   }
+
+
 extension UIViewController {
     func windowHeight() -> CGFloat {
         return UIScreen.main.bounds.size.height
@@ -97,6 +113,12 @@ extension UIViewController {
         return UIScreen.main.bounds.size.width
     }
     
+    func isValidEmail(_ email: String) -> Bool {
+           let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+
+           let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+           return emailPred.evaluate(with: email)
+       }
 
 }
 

@@ -17,5 +17,4 @@ struct Doctor{
     var photo: String
     var patientsUID: [String]
     var patients: [Patient] = []
-
 }

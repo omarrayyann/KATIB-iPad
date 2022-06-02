@@ -11,10 +11,11 @@ import UIKit
 struct Patient{
     var firstName: String
     var lastName: String
-    var age: Int
-    var gender: String
-    var uid: String
     var photo: String
     var doctor: Doctor
+    var finishedTasks: [String]
+    var assignedTasks: [String]
+    var lastActive: Date 
+    
 
 }

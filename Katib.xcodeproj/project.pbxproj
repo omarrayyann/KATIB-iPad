@@ -25,6 +25,9 @@
 		455C0803283D0D2900F8ED53 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C0802283D0D2900F8ED53 /* DrawingViewController.swift */; };
 		45A73C62283CEB9F00F16448 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A73C61283CEB9F00F16448 /* MainViewController.swift */; };
 		45A73C64283CEC5A00F16448 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A73C63283CEC5A00F16448 /* Extensions.swift */; };
+		45A9E4A8284763A00011D002 /* AddPatientOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9E4A7284763A00011D002 /* AddPatientOptionsViewController.swift */; };
+		45A9E4AC28477F4B0011D002 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9E4AB28477F4B0011D002 /* Config.swift */; };
+		45A9E4AE2847A7580011D002 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9E4AD2847A7580011D002 /* Task.swift */; };
 		45BE05452846254800A85FB2 /* EditPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE05442846254800A85FB2 /* EditPatientViewController.swift */; };
 		45BE0547284625F100A85FB2 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE0546284625F100A85FB2 /* Doctor.swift */; };
 		45CD2506284214D300B744BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45CD2505284214D300B744BC /* GoogleService-Info.plist */; };
@@ -54,6 +57,9 @@
 		455C0802283D0D2900F8ED53 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		45A73C61283CEB9F00F16448 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		45A73C63283CEC5A00F16448 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		45A9E4A7284763A00011D002 /* AddPatientOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPatientOptionsViewController.swift; sourceTree = "<group>"; };
+		45A9E4AB28477F4B0011D002 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		45A9E4AD2847A7580011D002 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		45BE05442846254800A85FB2 /* EditPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPatientViewController.swift; sourceTree = "<group>"; };
 		45BE0546284625F100A85FB2 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 		45CD2505284214D300B744BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/untitled folder 2/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -102,6 +108,7 @@
 				4501E9CC283CC7910098A376 /* SceneDelegate.swift */,
 				4501E9CE283CC7910098A376 /* SignInViewController.swift */,
 				4501E9D0283CC7910098A376 /* Main.storyboard */,
+				45A9E4A7284763A00011D002 /* AddPatientOptionsViewController.swift */,
 				45BE05442846254800A85FB2 /* EditPatientViewController.swift */,
 				45CD250B2842565E00B744BC /* ProfileViewController.swift */,
 				45CD25092842489600B744BC /* ProfilePictureViewController.swift */,
@@ -121,6 +128,8 @@
 				451F7B4B283E57EA00AE93DC /* PatientCollectionViewCell.swift */,
 				451F7B4C283E57EA00AE93DC /* PatientCollectionViewCell.xib */,
 				451F7B51283F628B00AE93DC /* Data.swift */,
+				45A9E4AB28477F4B0011D002 /* Config.swift */,
+				45A9E4AD2847A7580011D002 /* Task.swift */,
 			);
 			path = Katib;
 			sourceTree = "<group>";
@@ -276,6 +285,9 @@
 				45BE0547284625F100A85FB2 /* Doctor.swift in Sources */,
 				4501E9CB283CC7910098A376 /* AppDelegate.swift in Sources */,
 				4501E9CD283CC7910098A376 /* SceneDelegate.swift in Sources */,
+				45A9E4AC28477F4B0011D002 /* Config.swift in Sources */,
+				45A9E4A8284763A00011D002 /* AddPatientOptionsViewController.swift in Sources */,
+				45A9E4AE2847A7580011D002 /* Task.swift in Sources */,
 				45A73C62283CEB9F00F16448 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

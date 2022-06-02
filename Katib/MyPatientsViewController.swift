@@ -7,17 +7,33 @@
 
 import UIKit
 import Kingfisher
+import FirebaseFirestore
+import FirebaseAuth
 
 protocol PatientChoiceDelegate{
     func clicked_patient(patient: Patient)
 }
 
-class MyPatientsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, PatientChoiceDelegate {
+
+protocol refreshingDelegate{
+    func refresh_patients()
+}
+
+
+
+class MyPatientsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, PatientChoiceDelegate, refreshingDelegate {
+    
+    func refresh_patients() {
+        loadPatients()
+    }
+    
+    @IBOutlet weak var addPatientsButton: UIButton!
+    private let refreshControl = UIRefreshControl()
     
     func clicked_patient(patient: Patient){
         if patient.firstName == "additionButton"{
             // clicked add patient
-            
+            performSegue(withIdentifier: "toAddPatient", sender: self)
         }
         else{
         chosen_patient = patient
@@ -25,10 +41,10 @@ class MyPatientsViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     var patients: [Patient] = []
-    var chosen_patient: Patient = Patient(firstName: "", lastName: "", age: 0, gender: "", uid: "", photo: "", doctor: Doctor(firstName: "", lastName: "", username: "", email: "", uid: "", photo: "", patientsUID: []))
+    var chosen_patient: Patient = Patient(firstName: "", lastName: "", photo: "", doctor: Doctor(firstName: "", lastName: "", username: "", email: "", uid: "", photo: "", patientsUID: []), finishedTasks: [], assignedTasks: [], lastActive: Date.now)
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (patients.count + 1)
+        return (self.patients.count + 1)
     }
     
     
@@ -39,9 +55,14 @@ class MyPatientsViewController: UIViewController, UICollectionViewDataSource, UI
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "patient", for: indexPath as IndexPath) as! PatientCollectionViewCell
             cell.patient = patient
             cell.nameLabel.text = "\(patient.firstName) \(patient.lastName)"
-            cell.profilePhoto.kf.setImage(with: URL(string: patient.photo))
-            cell.ageLabel.text = "\(patient.age) years old"
+            if patient.photo=="" || patient.photo=="non"{
+                cell.profilePhoto.image = UIImage(named: "default")
+            }
+            else{
+                cell.profilePhoto.kf.setImage(with: URL(string: patient.photo))}
+            cell.lastActiveLabel.text = "Last Active: \(patient.lastActive.timeAgoDisplay())"
             cell.delegate = self
+            cell.wholeView.isHidden = false
             return cell
             
         }
@@ -49,13 +70,76 @@ class MyPatientsViewController: UIViewController, UICollectionViewDataSource, UI
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "patient", for: indexPath as IndexPath) as! PatientCollectionViewCell
             cell.patient.firstName = "additionButton"
             cell.wholeView.isHidden = true
+            cell.delegate = self
             return cell
         }
     }
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let db = Firestore.firestore()
+    
+    func loadPatients(){
+        patients = []
+        if let uidDoctor = Auth.auth().currentUser?.uid{
+            db.collection("Doctors").document(uidDoctor).getDocument { snapshot, error in
+                if let e = error {
+                    print(e)
+                }
+                else{
+                    if let patientsData = snapshot?.data()?["patients"] as? [String] {
+                        if patientsData.count == 0{
+                            self.collectionView.isHidden = true
+                            self.addPatientsButton.isHidden = false
+                        }
+                        for patient in patientsData {
+                            self.addPatientsButton.isHidden = true
+                            self.collectionView.isHidden = false
+                            self.db.collection("Patients").document(patient).getDocument { snapshotPatient, error in
+                                if let e = error {
+                                    print(e)
+                                }
+                                else{
+                                    if let patientFirstName = snapshotPatient?.data()?["firstName"] as? String, let patientLastName = snapshotPatient?.data()?["lastName"] as? String, let patientUsername = snapshotPatient?.data()?["username"] as? String, let email = snapshotPatient?.data()?["email"] as? String, let assignedTasks = snapshotPatient?.data()?["assignedTasks"] as? [String], let finishedTasks = snapshotPatient?.data()?["finishedTasks"] as? [String], let patientPhoto = snapshotPatient?.data()?["profilePicture"] as? String , let doctorUID = snapshotPatient?.data()?["doctorUID"] as? String, let lastTimeActive = snapshotPatient?.data()?["lastTimeActive"] as? String  {
+                                        print("here")
+                                        
+                                        self.patients.append(Patient(firstName: patientFirstName, lastName: patientLastName, photo: patientPhoto, doctor: Data.shared.doctor, finishedTasks: finishedTasks, assignedTasks: assignedTasks, lastActive: Date(timeIntervalSince1970: Double(lastTimeActive) ?? 0)))
+                                        if self.patients.count == patientsData.count {
+                                            self.collectionView.reloadData()
+                                            print("Done")
+                                            self.refreshControl.endRefreshing()
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            
+        }
+            
+            
+            
+    }
+    
+    
+    @objc private func refreshFeed(_ sender: Any) {
+            // Fetch Weather Data
+            loadPatients()
+        }
+    
+    @IBAction func addPatientsClicked(_ sender: Any) {
+        performSegue(withIdentifier: "toAddPatient", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadPatients()
+        collectionView.refreshControl = refreshControl
+        refreshControl.tintColor = UIColor(named: "OtherColor")
+        refreshControl.addTarget(self, action: #selector(refreshFeed(_:)), for: .valueChanged)
 //        patients = Data.shared.patients
         collectionView.register(UINib(nibName: "PatientCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "patient" )
         let width = (windowWidth()-100)/4
@@ -72,6 +156,12 @@ class MyPatientsViewController: UIViewController, UICollectionViewDataSource, UI
         if segue.identifier == "toPatient"{
             let destinationVC = segue.destination as! PatientViewController
             destinationVC.patient = chosen_patient
+        }
+        if segue.identifier == "toAddPatient"{
+            let nav = segue.destination as! UINavigationController
+            let destinationVC = nav.viewControllers.first as! AddPatientOptionsViewController
+            destinationVC.delegateRefresh = self
+
         }
     }
 

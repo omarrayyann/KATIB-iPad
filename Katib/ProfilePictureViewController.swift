@@ -17,6 +17,7 @@ class ProfilePictureViewController: UIViewController, UIImagePickerControllerDel
     
     let db = Firestore.firestore()
     
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var indicator: NVActivityIndicatorView!
     @IBOutlet weak var wholeFirstName: UIView!
     @IBOutlet weak var wholeLastName: UIView!
@@ -98,18 +99,21 @@ class ProfilePictureViewController: UIViewController, UIImagePickerControllerDel
     @IBAction func clickedSkip(_ sender: Any) {
         // clicked save
         indicator.isHidden = false
+        self.errorLabel.isHidden = true
         self.wholeView.isUserInteractionEnabled = false
         let photoIdString = NSUUID().uuidString
                    let firstPhotoID = photoIdString
 
+        if firstNameLabel.text != "" && lastNameLabel.text != "" {
         if let firstPhotoUIimage = profilePicture.image, let firstPhotoData = profilePicture.image!.jpegData(compressionQuality: 0.2){
 
                    storageRef.child(firstPhotoID).putData(firstPhotoData, metadata: nil) { (metadata, error) in
                        if let e = error {
                            print(e)
-                           self.indicator.stopAnimating()
-                           self.skipButton.isHidden = false
                            self.wholeView.isUserInteractionEnabled = true
+                           self.indicator.isHidden = true
+                           self.errorLabel.isHidden = false
+                           self.errorLabel.shake()
                            
                        }
                        else{
@@ -119,10 +123,10 @@ class ProfilePictureViewController: UIViewController, UIImagePickerControllerDel
                                if let e = error {
                                    print(e)
                                    self.dismiss(animated: true, completion: nil)
-                                   self.indicator.stopAnimating()
-                                   self.indicator.isHidden = true
-                                   self.skipButton.isHidden = false
                                    self.wholeView.isUserInteractionEnabled = true
+                                   self.indicator.isHidden = true
+                                   self.errorLabel.isHidden = false
+                                   self.errorLabel.shake()
                               
                                }
                                else if let urlToFirstImage = url?.absoluteString {
@@ -131,8 +135,10 @@ class ProfilePictureViewController: UIViewController, UIImagePickerControllerDel
                                        self.db.collection("Doctors").document(dotorUID).updateData(["profilePicture": urlToFirstImage, "firstName": self.firstNameLabel.text ?? "", "lastName": self.lastNameLabel.text ?? ""]) { error in
                                            if let e = error {
                                                print(e)
-                                               self.indicator.isHidden = true
                                                self.wholeView.isUserInteractionEnabled = true
+                                               self.indicator.isHidden = true
+                                               self.errorLabel.isHidden = false
+                                               self.errorLabel.shake()
                                            }
                                            else{
                                                // DONE
@@ -151,7 +157,7 @@ class ProfilePictureViewController: UIViewController, UIImagePickerControllerDel
                                }
                             
                            }
-                           
+                   }
                            
                            
                        }
@@ -160,6 +166,12 @@ class ProfilePictureViewController: UIViewController, UIImagePickerControllerDel
                        
                        
                }
+        else{
+            self.wholeView.isUserInteractionEnabled = true
+            self.indicator.isHidden = true
+            self.errorLabel.isHidden = false
+            self.errorLabel.shake()
+        }
                    
               
                                     

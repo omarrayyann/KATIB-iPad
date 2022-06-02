@@ -12,8 +12,7 @@ class PatientViewController: UIViewController {
     @IBOutlet weak var profilePicture: UIImageView!
     var patient: Patient!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var ageLabel: UILabel!
-    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var lastActiveLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +23,7 @@ class PatientViewController: UIViewController {
         profilePicture.layer.cornerRadius = profilePicture.frame.height / 20
         // This will change the navigation bar background color
         nameLabel.text = "\(patient.firstName) \(patient.lastName)"
-        ageLabel.text = "\(patient.age) years old"
-        genderLabel.text = patient.gender
+        lastActiveLabel.text = "Last Active: \(patient.lastActive.timeAgoDisplay())"    
         
         
         
