@@ -16,6 +16,12 @@ extension UIView {
         self.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
+    func round(divideHeightBy: Double){
+        self.layer.cornerRadius = self.frame.height/divideHeightBy
+        self.layer.masksToBounds = true
+
+    }
+    
     func shadow_custom_1(){
         self.layer.cornerRadius = self.frame.size.height/2
         self.clipsToBounds = false

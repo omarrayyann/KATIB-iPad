@@ -34,6 +34,12 @@
 		45CD2508284222C900B744BC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CD2507284222C900B744BC /* RegisterViewController.swift */; };
 		45CD250A2842489600B744BC /* ProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CD25092842489600B744BC /* ProfilePictureViewController.swift */; };
 		45CD250C2842565E00B744BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CD250B2842565E00B744BC /* ProfileViewController.swift */; };
+		45D524DA2849921B0001394C /* AssignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D524D92849921A0001394C /* AssignViewController.swift */; };
+		45D524DD2849967D0001394C /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D524DB2849967D0001394C /* TaskCollectionViewCell.swift */; };
+		45D524E028499A860001394C /* TaskCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D524DF28499A850001394C /* TaskCollectionViewCell.xib */; };
+		45D524E42849B8B80001394C /* LettersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D524E32849B8B80001394C /* LettersViewController.swift */; };
+		45D524E62849B9380001394C /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D524E52849B9370001394C /* Letter.swift */; };
+		45D524EA284A0D4D0001394C /* LettersPackagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D524E9284A0D4D0001394C /* LettersPackagesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +72,12 @@
 		45CD2507284222C900B744BC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		45CD25092842489600B744BC /* ProfilePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureViewController.swift; sourceTree = "<group>"; };
 		45CD250B2842565E00B744BC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		45D524D92849921A0001394C /* AssignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignViewController.swift; sourceTree = "<group>"; };
+		45D524DB2849967D0001394C /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
+		45D524DF28499A850001394C /* TaskCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskCollectionViewCell.xib; sourceTree = "<group>"; };
+		45D524E32849B8B80001394C /* LettersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersViewController.swift; sourceTree = "<group>"; };
+		45D524E52849B9370001394C /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
+		45D524E9284A0D4D0001394C /* LettersPackagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LettersPackagesViewController.swift; path = "View Controllers/LettersPackagesViewController.swift"; sourceTree = "<group>"; };
 		93A5049F5A0C62E201837FD3 /* Pods_Katib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Katib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DD84DF289AA45A7131279E /* Pods-Katib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Katib.debug.xcconfig"; path = "Target Support Files/Pods-Katib/Pods-Katib.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,34 +116,56 @@
 			isa = PBXGroup;
 			children = (
 				4501E9CA283CC7910098A376 /* AppDelegate.swift */,
-				451F7B4F283E665400AE93DC /* MyPatientsViewController.swift */,
+				45D524E72849B95F0001394C /* Classes */,
+				45D524E82849B9760001394C /* View Controllers */,
 				4501E9CC283CC7910098A376 /* SceneDelegate.swift */,
-				4501E9CE283CC7910098A376 /* SignInViewController.swift */,
 				4501E9D0283CC7910098A376 /* Main.storyboard */,
+				45D524E9284A0D4D0001394C /* LettersPackagesViewController.swift */,
+				45CD2505284214D300B744BC /* GoogleService-Info.plist */,
+				4501E9D6283CC7930098A376 /* Assets.xcassets */,
+				4501E9D8283CC7930098A376 /* LaunchScreen.storyboard */,
+				4501E9DB283CC7930098A376 /* Info.plist */,
+				4501E9D3283CC7910098A376 /* Katib.xcdatamodeld */,
+			);
+			path = Katib;
+			sourceTree = "<group>";
+		};
+		45D524E72849B95F0001394C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				451F7B49283E56FC00AE93DC /* Patient.swift */,
+				45BE0546284625F100A85FB2 /* Doctor.swift */,
+				451F7B51283F628B00AE93DC /* Data.swift */,
+				45A9E4AB28477F4B0011D002 /* Config.swift */,
+				45A9E4AD2847A7580011D002 /* Task.swift */,
+				45D524E52849B9370001394C /* Letter.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		45D524E82849B9760001394C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				45A73C63283CEC5A00F16448 /* Extensions.swift */,
+				451F7B4F283E665400AE93DC /* MyPatientsViewController.swift */,
+				4501E9CE283CC7910098A376 /* SignInViewController.swift */,
+				45D524D92849921A0001394C /* AssignViewController.swift */,
 				45A9E4A7284763A00011D002 /* AddPatientOptionsViewController.swift */,
 				45BE05442846254800A85FB2 /* EditPatientViewController.swift */,
 				45CD250B2842565E00B744BC /* ProfileViewController.swift */,
 				45CD25092842489600B744BC /* ProfilePictureViewController.swift */,
 				45CD2507284222C900B744BC /* RegisterViewController.swift */,
-				45CD2505284214D300B744BC /* GoogleService-Info.plist */,
 				451F7B53283F669300AE93DC /* PatientViewController.swift */,
 				455C0802283D0D2900F8ED53 /* DrawingViewController.swift */,
 				4547B98928410E7D00D4D4BC /* CoordinatePoint.swift */,
 				45A73C61283CEB9F00F16448 /* MainViewController.swift */,
-				45A73C63283CEC5A00F16448 /* Extensions.swift */,
-				4501E9D6283CC7930098A376 /* Assets.xcassets */,
-				4501E9D8283CC7930098A376 /* LaunchScreen.storyboard */,
-				4501E9DB283CC7930098A376 /* Info.plist */,
-				4501E9D3283CC7910098A376 /* Katib.xcdatamodeld */,
-				451F7B49283E56FC00AE93DC /* Patient.swift */,
-				45BE0546284625F100A85FB2 /* Doctor.swift */,
 				451F7B4B283E57EA00AE93DC /* PatientCollectionViewCell.swift */,
 				451F7B4C283E57EA00AE93DC /* PatientCollectionViewCell.xib */,
-				451F7B51283F628B00AE93DC /* Data.swift */,
-				45A9E4AB28477F4B0011D002 /* Config.swift */,
-				45A9E4AD2847A7580011D002 /* Task.swift */,
+				45D524DF28499A850001394C /* TaskCollectionViewCell.xib */,
+				45D524DB2849967D0001394C /* TaskCollectionViewCell.swift */,
+				45D524E32849B8B80001394C /* LettersViewController.swift */,
 			);
-			path = Katib;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		63DD966D7D4CD5670CA9773C /* Frameworks */ = {
@@ -214,6 +248,7 @@
 				4501E9DA283CC7930098A376 /* LaunchScreen.storyboard in Resources */,
 				4501E9D7283CC7930098A376 /* Assets.xcassets in Resources */,
 				45CD2506284214D300B744BC /* GoogleService-Info.plist in Resources */,
+				45D524E028499A860001394C /* TaskCollectionViewCell.xib in Resources */,
 				451F7B4E283E57EA00AE93DC /* PatientCollectionViewCell.xib in Resources */,
 				4501E9D2283CC7910098A376 /* Main.storyboard in Resources */,
 			);
@@ -273,6 +308,8 @@
 				4501E9CF283CC7910098A376 /* SignInViewController.swift in Sources */,
 				451F7B54283F669300AE93DC /* PatientViewController.swift in Sources */,
 				45A73C64283CEC5A00F16448 /* Extensions.swift in Sources */,
+				45D524DA2849921B0001394C /* AssignViewController.swift in Sources */,
+				45D524DD2849967D0001394C /* TaskCollectionViewCell.swift in Sources */,
 				4547B98A28410E7D00D4D4BC /* CoordinatePoint.swift in Sources */,
 				45CD250C2842565E00B744BC /* ProfileViewController.swift in Sources */,
 				451F7B4A283E56FC00AE93DC /* Patient.swift in Sources */,
@@ -282,6 +319,8 @@
 				45CD2508284222C900B744BC /* RegisterViewController.swift in Sources */,
 				451F7B50283E665400AE93DC /* MyPatientsViewController.swift in Sources */,
 				45BE05452846254800A85FB2 /* EditPatientViewController.swift in Sources */,
+				45D524E42849B8B80001394C /* LettersViewController.swift in Sources */,
+				45D524E62849B9380001394C /* Letter.swift in Sources */,
 				45BE0547284625F100A85FB2 /* Doctor.swift in Sources */,
 				4501E9CB283CC7910098A376 /* AppDelegate.swift in Sources */,
 				4501E9CD283CC7910098A376 /* SceneDelegate.swift in Sources */,
@@ -289,6 +328,7 @@
 				45A9E4A8284763A00011D002 /* AddPatientOptionsViewController.swift in Sources */,
 				45A9E4AE2847A7580011D002 /* Task.swift in Sources */,
 				45A73C62283CEB9F00F16448 /* MainViewController.swift in Sources */,
+				45D524EA284A0D4D0001394C /* LettersPackagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
